@@ -46,7 +46,7 @@ public class Menu {
         System.out.printf("%s", 1 + (col = human? Input.getInt(console) - 1: stone.getColumn()));
         stone = human? new Stone(row, col, game.isBlacksTurn()) : stone;
         Result result = game.place(stone);
-        if(!result.isSuccess()){System.out.println(result);}
+        if(!result.isSuccess()){System.out.printf("%n%s%n", result);}
     }
 
     public void printBoard(Gomoku game) {
