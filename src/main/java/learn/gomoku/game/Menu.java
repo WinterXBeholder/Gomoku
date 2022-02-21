@@ -41,9 +41,9 @@ public class Menu {
         int row;
         int col;
         System.out.printf("%nEnter a row: ");
-        System.out.printf("%s", 1 + (row = human? Input.getInt(console, 1, 15) - 1: stone.getRow()));
+        System.out.printf("%s", 1 + (row = human? Input.getInt(console) - 1: stone.getRow()));
         System.out.printf("%nEnter a column: ");
-        System.out.printf("%s", 1 + (col = human? Input.getInt(console, 1, 15) - 1: stone.getColumn()));
+        System.out.printf("%s", 1 + (col = human? Input.getInt(console) - 1: stone.getColumn()));
         stone = human? new Stone(row, col, game.isBlacksTurn()) : stone;
         Result result = game.place(stone);
         if(!result.isSuccess()){System.out.println(result);}
