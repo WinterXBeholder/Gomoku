@@ -356,11 +356,4 @@ class GomokuTest {
         assertFalse(result.isSuccess());
         assertEquals("Game is over.", result.getMessage());
     }
-
-    @Test
-    void getCell() {
-        assertTrue(game.getCell(0,0) == 0, "board00 should be empty");
-        game.place(new Stone(0, 0, true));
-        assertTrue(game.getCell(0,0) == 'B', "board00 should Have B");
-    }
 }

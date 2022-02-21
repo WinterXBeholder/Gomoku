@@ -50,6 +50,7 @@ public class Menu {
     }
 
     public void printBoard(Gomoku game) {
+        Board board = new Board(game.getStones());
         String cellTemplate = "%3s";
         System.out.printf("%n%n%n");
         for (int r = 0; r < 16; r++) {
@@ -59,7 +60,7 @@ public class Menu {
                 } else if(c == 0) {
                     System.out.printf("%n%s", String.format(cellTemplate, r));
                 } else {
-                    char val = game.getCell(r-1, c-1);
+                    char val = board.getCell(r-1, c-1);
                     System.out.printf(cellTemplate, val == 0 ? "_" : val);
                 }
             }

@@ -23,10 +23,6 @@ public class Gomoku {
         return new ArrayList<>(stones);
     }
 
-    public char getCell(int row, int col) {
-        return board[row][col];
-    }
-
     public boolean isOver() {
         return over;
     }
