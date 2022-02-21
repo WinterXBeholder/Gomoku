@@ -74,7 +74,6 @@ public class Input {
         boolean isInt = false;
         do {
             try {
-                System.out.println("Enter an Integer: ");
                 input = Integer.parseInt(console.nextLine());
                 isInt = true;
             } catch (NumberFormatException e) {
@@ -87,6 +86,7 @@ public class Input {
                 System.out.printf("Scanner error: scanner closed%nIllegalStateException%n");
                 isInt = false;
             }
+            if (!isInt) {System.out.println("Enter an Integer: ");};
         } while (!isInt);
         return input;
     }
